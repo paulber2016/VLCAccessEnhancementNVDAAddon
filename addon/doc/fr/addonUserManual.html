@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+<link rel="stylesheet" type="text/css" href="../style_md.css" media="screen"/>
+<title>Lecteur multimédia VLC: compléments d'accessibilité 1.1</title>
+</head>
+<body>
+<h1>Lecteur  multimédia VLC : compléments d'accessibilité - manuel utilisateur</h1>
+<ul>
+<li>Auteurs :  Paulber19 avec la participation très active de  Daniel Poiraud.</li>
+<li>Télécharger  version 1.0:<ul>
+<li><a href="http://angouleme.avh.asso.fr/fichesinfo/fiches_nvda/data/VLCAccessEnhancement-1.0.1.nvda-addon">serveur de téléchargement 1</a></li>
+<li><a href="https://rawgit.com/paulber007/AllMyNVDAAddons/master/VLC/VLCAccessEnhancement-1.0.1.nvda-addon">serveur de téléchargement 2</a></li>
+</ul>
+</li>
+</ul>
+<p>Ce module complémentaire ajoute diverses commandes pour faciliter la lecture des médias avec NVDA.<br />
+</p>
+<p>Il a été testé sur VLC 3.0, Windows 10  NVDA 2018.2.1 et NVDA 2018.3.</p>
+<h2>Gestes de commande apportés par le module:</h2>
+<ul>
+<li>NVDA+Control+H : Afficher l'aide sur les raccourcis possibles dans la fenêtre principale,</li>
+<li>virgule : annoncer la  durée lue du média,</li>
+<li>point-virgule : annoncer la durée du média restante à lire,</li>
+<li>deux points : annoncer la durée totale du média,</li>
+<li>point d'exclamation : annoncer la vitesse de lecture,</li>
+<li>Control + virgule : Afficher le dialogue pour  définir un temps et déplacer le curseur de lecture à ce temps,</li>
+<li>NVDA+control+f5: enregistrer le temps courant du média pour une future relance de la lecture,</li>
+<li>NVDA+control+f6: relancer la lecture  au temps enregistré pour ce média,</li>
+<li>alt+control+r: relancer la lecture interrompue à la position mémorisée par VLC.</li>
+</ul>
+<p>Ces gestes de commandes peuvent être modifiés  avec le dialogue "Gestes de commande" de NVDA.</p>
+<h2>Raccourcis clavier propre à VLC vocalisés par le module:</h2>
+<p>Certains raccourcis prévus par défaut par VLC posent des problèmes et doivent être modifiés. Ce sont:</p>
+<ul>
+<li>Les raccourcis-clavier "Crochet fermé" et "Crochet ouvert" pour la vitesse de lecture un peu plus rapide ou un peu plus lente,   car ils ne sont pas utilisables en clavier français. Ils seront remplacés par "I" et "U". ,</li>
+<li>les raccourcis -clavier "control+alt+flèche droite ou gauche" pour avancer ou reculer de 5 minutes le média, car ne fonctionnant pas dans certaines configuration. Ils seront remplacés par "control+majuscule+flèche droite ou gauche".</li>
+<li>les raccourcis-clavier "+" et"-" du clavier alphanumérique pour modifier la vitesse de lecture, car mal placés. Ils seront remplacés par "o" et "y".</li>
+</ul>
+<p>Pour mettre en place ces nouveaux raccourcis, vous devez procéder  à la modification du fichier de configuration  "vlcrc" de VLC comme ceci:</p>
+<ul>
+<li>après  avoir installé VLC ou supprimé le dossier de configuration deVLC, lancez le une première fois  en utilisant le raccourci du bureau ou en lisant un média, puis arrêtez  le.</li>
+<li>tapez "NVDA+n" et  dans le sous-menu "préférences", sélectionner le sous-menu "Lecteur multimédiaVLC: compléments d'accessibilité - paramètres ",</li>
+<li>enfin, appuyez sur le bouton "Modifier les raccourcis du lecteur média  VLC".</li>
+</ul>
+<p>Voici les raccourcis clavier que le module vocalise:</p>
+<ul>
+<li>Y : diminuer la vitesse de lecture.</li>
+<li>U : diminuer un peu la vitesse de lecture.</li>
+<li>I : augmenter un peu la vitesse de lecture.</li>
+<li>O : augmenter la vitesse de lecture.</li>
+<li>signe égal : retourner à la vitesse normale,</li>
+<li>m : couper ou remettre le son,</li>
+<li>espace : lancer ou mettre en pause la lecture,</li>
+<li>s: arrêter le média,</li>
+<li>l : basculer l'état de répétition du média entre   répéter tout, répéter le média courant, ne pas répéter,</li>
+<li>majuscule + flèche droite ou gauche: avancer ou reculer la durée lue du média de 3 secondes,</li>
+<li>alt + flèche droite ou gauche : avancer ou reculer la durée lue du média de 10 secondes,</li>
+<li>control + flèche droite ou gauche : avancer ou reculer  la durée lue du média de 1 minute,</li>
+<li>control majuscule+ flèche droite ou gauche: avancer ou reculer la durée lue du média de 5 minutes.</li>
+<li>flèche haut ou bas: augmenter ou baisser le volume,</li>
+<li>control flèche haut ou bas: augmenter ou baisser le volume,</li>
+<li>espace: mettre en pause le média ou relancer la lecture.</li>
+</ul>
+<p>Pour ne pas gêner l'utilisateur, la  durée lue automatiquement  est vocalisée uniquement lorsque le média est en pause ou en lecture avec le son coupé.</p>
+<p>Un contrôle est fait pour empêcher un saut en dehors  des limites du média. Par exemple, il n'est pas possible de faire un saut de 5 minutes s'il ne reste que 2 minutes restantes à lire ou bien reculer de 10 secondes si la durée déjà lue est de 3 secondes.<br />
+</p>
+<p>L'état "son coupé" est signalé lors  du lancement de la lecture.</p>
+<p>Le niveau du volume est annoncé à chaque modification.</p>
+<p>Le passage en pause est annoncé.</p>
+<h2>Script Afficher le dialogue pour  définir un temps et déplacer le curseur de lecture à ce temps</h2>
+<p>VLC offre la possibilité à l'aide du raccourci "contrôl+t" de se déplacer à un temps précis du média. Mais la boite de dialogue qu'il présente pose des problèmes d’accessibilité.</p>
+<p>Le module offre une autre solution  (préférable) pour se déplacer à un temps avec le  raccourci "control+virgule".<br />
+Ce raccourci présente une boite de dialogue qui vous permet de définir le temps (heures, minutes, secondes) où positionner le curseur de lecture du média, dans la limite de la durée totale du média diminuée de 5 secondes.</p>
+<h2>Relance de la lecture</h2>
+<p>Pour pouvoir reprendre  la lecture d'un média, deux solutions sont possibles:</p>
+<h3>Première solution</h3>
+<p>VLC mémorise la position courante de lecture au moment  où celle-ci est interrompue,  c'est à dire   soit suite à une  commande  VLC, soit en quittant l'application.</p>
+<p>Lorsque le média est relancé, VLC affiche la possibilité de reprise dans la barre d'état pendant un temps très court (quelques secondes)  et en tapant le raccourci "alt+r", la lecture est relancée à la position enregistrée pour ce média.</p>
+<p>Comme ceci est difficilement utilisable pour un non voyant,le module apporte un script qui permet de relancer la lecture à la position enregistrée par VLC sans avoir cette contrainte de temps.</p>
+<p>Lorsque un média est relancé et que VLC a enregistré , pour ce média, une position de reprise de la lecture,  l'annonce vocale"Reprise de la lecture alt+control+r"  l'indique. En utilisant le geste de commande "alt+control+r",  la lecture du média continue à la position enregistrée.</p>
+<p>Ce geste de commande est modifiable par l'utilisateur.</p>
+<h3>Seconde solution</h3>
+<p>Cette seconde solution  nécessite tout d'abord de marquer la position de reprise de la lecture à l'aide du geste de commande "nvda+control+f5".
+Il est préférable de mettre en pause le média au préalable.
+Vous n'êtes pas obligé de quitter VLC pour reprendre la lecture de ce média.</p>
+<p>Pour reprendre la lecture d'un  média, la commande clavier "NVDA+control+f6"  relancera la lecture   à la position enregistrée par le module pour ce média.</p>
+<p>Cette position est enregistrée dans le fichier de configuration du module et pour chaque média sont enregistrés le nom du média et la position associée. Seuls les médias les plus récemment ouverts sont conservés dans ce fichier.</p>
+<p>Attention: le nom du média  est unique dans ce fichier. Si deux fichiers de même noms sont dans des dossiers différents, seul le dernier  enregistrement pour ce nom sera retenu.</p>
+<h2>Compléments techniques</h2>
+<h3>Réinitialisation de la configuration de VLC</h3>
+<p>Lors de son démarage, VLC crée dans le dossier de configuration utilisateur de Windows,  le dossier "vlc" qui contient les fichiers de configuration de VLC.</p>
+<p>Pour réinitialiser la configuration deVLC sans avoir à le réinstaller, il suffit de supprimer ce dossier.</p>
+<p>Pour faciliter cela, le module offre le bouton "Supprimer le dossier de configuration de VLC" dans le dialogue de configuration du module .</p>
+<p>Par la suite, si le bouton "Modifier les raccourcis du lecteur média  VLC  " doit être utiliser, il est nécessaire de lancer au moins une fois VLC pour recréer ce dossier et les fichiers de configuration de VLC.</p>
+<h3>Support du multilinguisme du lecteur multimédia VLC</h3>
+<p>Comme les concepteurs du lecteur multimédia n'ont pas prévu dans le logiciel de fournir des informations pertinentes pour identifier  les objets le constituant, le module s'appuie sur leur nom ou leur description.
+Pour ce faire, il est nécessaire de définir pour chaque langue de VLC les objets utilisés par le module. Ces définitions se trouvent dans les fichiers "strings-xx.ini" (xx = identifiant de la langue) du dossier "VLCLocale du module.
+Ces fichiers sont enregistrés en codage "UTF-8" sans BOM.
+Pour connaitre la langue configuré dans VLC, le module utilise le nom du second menu de la barre de menus et c'est la  clé "StringToFindLanguage " de la section "main" qui le défini.
+La section "VLC" du fichier   contient les clés permettant d'identifier les objets. Ce sont:</p>
+<ul>
+<li>VLCAppTitle =  définit le titre de la fenêtre de VLC sans média lancé.</li>
+<li>PlayButtonDescription = définit la description du bouton lecture</li>
+<li>PauseThePlaybackButtonDescription =  définit la description du bouton pause</li>
+<li>UnMuteImageDescription =  définit la description du bouton pour couper ou remettre le son</li>
+<li>LoopCheckButtonDescription = définit la description du bouton pour mettre la lecture du média en mode répétition ou non.</li>
+<li>RandomCheckButtonDescription = définit la description du bouton pour une lecture en mode normal ou aléatoire</li>
+</ul>
+<h3>Définition des raccourcis-clavier à modifier</h3>
+<p>Comme indiqué précédemment, certains raccourcis de VLC ne sont pas exploitables  suivant le type de clavier. Le module permet de les définir et de les modifier.</p>
+<p>Les définitions de ces raccourcis à modifier sont dans le fichier "settings.ini" du dossier "locale" pour  chaque langue de NVDA supportée par le module.
+Dans ce fichier, la section "vlc-keynames"  définit par un numéro, les  identifiants VLC  des raccourcis à modifier et la section "vlc-assignements", associe à chaque identifiant le nouveau raccourcis.
+Les raccourcis doivent être sous la forme comprise par VLC(par exemple, Ctrl pour control, left pour flèche gauch).</p>
+<h3>Définition des gestes de commande</h3>
+<p>Les gestes de commandes du module sont également définis dans le fichier "settings.ini".
+Ils se trouvent dans la section "script-gestures" et pour chaque script, il est possible d'attribuer un ou plusieurs gestes de commande sous la forme NVDA,  (par exemple kb:(desktop):control+c, kb:nvda+shift+alt+f1).
+Les identifiants des scripts sont:</p>
+<ul>
+<li>goToTime=script "Afficher le dialogue pour  définir un temps et déplacer le curseur de lecture à ce temps",</li>
+<li>reportElapsedTime=script "Annoncer la durée déjà lue du média ",</li>
+<li>reportRemainingTime=script "Annoncer la durée du média restante à lire",</li>
+<li>reportTotalTime=script "Annoncer la durée totale du média",</li>
+<li>reportCurrentSpeed="script Annoncer  la vitesse courante  ",</li>
+<li>recordResumeFile=script "Enregistrer la position courante de lecture pour ce média ",</li>
+<li>resumePlayback= script "Relancer la lecture à la position  enregistrée pour ce média ".</li>
+<li>continuePlayback= script "Reprendre la lecture interrompue à la position mémorisée par VLC"</li>
+</ul>
+<h2>Historique</h2>
+<h3>Version 1.1 (21/12/2018)</h3>
+<ul>
+<li>correction de non reprise de la lecture lorsque la liste des médias récents n'a qu'un seul média,</li>
+<li>corrections de la documentation,</li>
+<li>mise en compatibilité avec les versions alpha 2019.1 de NVDA.</li>
+</ul>
+<h3>Version 1.0 (29/10/2018)</h3>
+<p>Pour éviter une confusion avec d'autres modules complémentaires pour VLC, le nom du module est renommé en "VLCAccessEnhancement" et dans le gestionnaire de modules complémentaires, il se nomme "Lecteur multimédia VLC: compléments d'accessibilité".</p>
+<p>Nouveautés:</p>
+<ul>
+<li>mise en compatibilité avec NVDA 2018.3,</li>
+<li>changement du nom du module pour éviter toute confusion avec d'autres modules pour VLC.</li>
+<li>annonce  de l'indication de la possibilité de reprise de la lecture interrompue à la position mémorisée parVLC et reprise de la lecture à l'aide du geste de commande "alt+control+r",</li>
+<li>ajout du bouton pour supprimer le fichier de configuration deVLC,</li>
+</ul>
+<p>Changement interne:</p>
+<ul>
+<li>remaniement complet du code,</li>
+<li>fichier style.css renommé en style_md.css,</li>
+<li>reconversion du fichier manuel utilisateur pour conformité  de forme avec les modules complémentaires  internationnaux,</li>
+<li>renomage du menu de configuration du module.</li>
+</ul>
+<h2>Historique précédent</h2>
+<h3>Version 3.0 (19/06/2018)</h3>
+<p>Cette version est  compatible avec VLC 3.0, incompatible avec les anciennes versions.</p>
+<p>Nouveauté:</p>
+<ul>
+<li>vocalisation de l'indicateur de répétition du média,</li>
+<li>lecture correcte de la barre d'état,</li>
+<li>annonce de l'état  lecture ou pause avec le son coupé lors de  la focalisation de la fenêtre principale.</li>
+</ul>
+<p>Changements:</p>
+<ul>
+<li>le fichier de configuration de VLC n'est plus modifié automatiquement pour  définir les raccourcis clavier.  Leur mise en place est faite manuellement par l'utilisateur à l’aide d'un simple bouton,</li>
+<li>la boite de dialogue "Aller au temps" de VLC n'est plus vocalisée.</li>
+<li>le niveau du volume est maintenant annoncé à chaque modification.</li>
+</ul>
+<h3>Version 2.3.1</h3>
+<ul>
+<li>correction de bugs (régression de "nvda+control+h")</li>
+</ul>
+<h3>Version 2.3</h3>
+<ul>
+<li>ajout des scripts pour la relance de la lecture</li>
+<li>ajout de la gestion d'un fichier de configuration pour le module</li>
+</ul>
+<h3>Version 2.2</h3>
+<ul>
+<li>configuration du fichier vlcrc pour modifier les touches de variations de vitesse,</li>
+<li>annonce de la durée lue lors des sauts de  lecture,</li>
+<li>annonce de la coupure /remise du son,</li>
+<li>annonce du passage en pause,</li>
+<li>vocalisation de la boite de dialogue de VLC "Aller au temps",</li>
+<li>modification de la boite de dialogue du module "Aller au temps".</li>
+</ul>
+<h3>Changements pour la version 2.0</h3>
+<ul>
+<li>Première version multilingue.</li>
+</ul>
+</body>
+</html>

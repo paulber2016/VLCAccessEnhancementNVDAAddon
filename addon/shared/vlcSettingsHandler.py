@@ -301,10 +301,13 @@ class QTInterface (VLCSettings):
 		recents = qtInterface [section]
 		filesList = []
 		timesList = []
-		if "list" in recents.keys():
-			for item in recents["list"]:
-				file = urllib.unquote(item.encode("utf-8"))
-				filesList.append(file.decode("utf-8"))
+		if "list" not in recents.keys():
+			return
+		l = recents["list"] if type(recents["list"]) is  list else [recents["list"],]
+		for item in l:
+			file = urllib.unquote(item.encode("utf-8"))
+			filesList.append(file.decode("utf-8"))
+		
 		if "times" in recents.keys():
 			timesList = recents["times"]
 			if type(timesList) is not list:
