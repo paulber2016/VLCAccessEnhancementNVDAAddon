@@ -160,6 +160,13 @@ The identifiers of the scripts are:
 
 ## History ## 
 
+
+### Version 1.1.2 (25/02/2019) ### 
+Modification of manifest.ini file for compatibility with NVDA 2019.1.0.
+
+### Version 1.1.1 (25/12/2018) ### 
+Documentation correction for download links.
+
 ### Version 1.1 (5/12/2018) ### 
 
 * correction of non-recovery of the playback when the media list recent has only a single medium, 
@@ -223,7 +230,7 @@ Changes:
 
 ### Changes for version 2.0 # # # $ $ | | $ $ $ $ | | $ $ * * * First multi-lingual version. $ $ | | $ $ $ $ | | $ $ 
 
-[1]: http://angouleme.avh.asso.fr/fichesinfo/fiches_nvda/data/VLCAccessEnhancement-1.1.1.nvda-addon 
-[2]: https://rawgit.com/paulber007/AllMyNVDAAddons/master/VLC/VLCAccessEnhancement-1.1.1.nvda-addon 
+[1]: http://angouleme.avh.asso.fr/fichesinfo/fiches_nvda/data/VLCAccessEnhancement-1.1.2.nvda-addon 
+[2]: https://rawgit.com/paulber007/AllMyNVDAAddons/master/VLC/VLCAccessEnhancement-1.1.2.nvda-addon 
 
 

@@ -34,7 +34,7 @@ Tested on NVDA 2018.2 and NVDA 2018.4
 """),
 
 	# version
-	"addon_version" : "1.1.1",
+	"addon_version" : "1.1.2",
 	# Author(s)
 	"addon_author" : u"PaulBer19",
 	# URL for the add-on documentation support
@@ -44,7 +44,7 @@ Tested on NVDA 2018.2 and NVDA 2018.4
 	# Minimum NVDA version supported (e.g. "2018.3")
 	"addon_minimumNVDAVersion" : "2018.2.1",
 	# Last NVDA version supported/tested (e.g. "2018.4", ideally more recent than minimum version)
-	"addon_lastTestedNVDAVersion" : 2019.1,
+	"addon_lastTestedNVDAVersion" : "2019.1.0",
 	# Add-on update channel (default is stable or None)
 	"addon_updateChannel" : None,
 }
